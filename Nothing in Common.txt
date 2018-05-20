@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int Z,T,N,M,A[1000],B[1000],S[1000],c=0,J,K;
+    cin>>T;
+    Z=T;
+    while(T--)
+    {   c=0;
+        cin>>N>>M;
+        J=N;
+        K=M;
+        while(N--)
+        {   cin>>A[N];
+        }
+        while(M--)
+        {   cin>>B[M];
+        }
+        for(int i=0;i<J;++i)
+        {   for(int v=0;v<K;++v)
+            {   if(A[i]==B[v])
+                    S[T]=++c;
+            }
+        }
+    }
+    while(Z--)
+    {   cout<<S[Z]<<"\n";
+    }
+    return 0;
+}

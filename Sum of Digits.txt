@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int L,T,N[1000];
+    int r,s=0;
+    cin>>T;
+    L=T;
+    while(T--)
+    {   cin>>N[T];
+    }
+    while(L--)
+    {   do
+        {   r=N[L]%10;
+            s+=r;
+            N[L]=N[L]/10;
+        }while(N[L]!=0);
+        cout<<s<<"\n";
+        s=0;
+    }
+	return 0;
+}
